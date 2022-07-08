@@ -13,17 +13,17 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-		return MultiProvider(
-			providers: [
-				ChangeNotifierProvider<m_form.Form>(
-					create: (BuildContext context) => m_form.Form(),
-				),
-			],
-			child: const MaterialApp(
-				localizationsDelegates: AppLocalizations.localizationsDelegates,
-				supportedLocales: [Locale('en', 'US'), Locale('de', 'DE')],
-				home: CustomForm(),
-			),
-		);
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<m_form.Form>(
+          create: (BuildContext context) => m_form.Form(),
+        ),
+      ],
+      child: const MaterialApp(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: [Locale('en', 'US'), Locale('de', 'DE')],
+        home: CustomForm(),
+      ),
+    );
   }
 }
